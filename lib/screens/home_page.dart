@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webapp/screens/about_page.dart';
+import 'package:webapp/screens/wishlist_page.dart';
 
 class HomePage extends StatefulWidget {
   static String id = 'home_page';
@@ -22,18 +23,28 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             CircleAvatar(
               foregroundImage: AssetImage('images/avatar.jpg'),
-              radius: 100,
+              radius: 200,
             ),
             Text(
               'Pavel Rodionov',
               style: TextStyle(fontSize: 40),
             ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AboutPage.id);
-              },
-              icon: Icon(Icons.account_circle),
-            )
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, AboutPage.id);
+                  },
+                  icon: Icon(Icons.account_circle),
+                ),
+                IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, WishlistPage.id);
+                    },
+                    icon: Icon(Icons.present_to_all))
+              ],
+            ),
           ],
         ),
       ),
