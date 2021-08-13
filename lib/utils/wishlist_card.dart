@@ -27,45 +27,41 @@ class WishlistCard extends StatelessWidget {
             assetImage,
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 15),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.white,
-                  child: Text(
-                    '$name',
-                    style: TextStyle(
-                      fontSize: (kWishlistCardNameFont),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    Text(
+                      '$name',
+                      style: TextStyle(
+                        fontSize: (kWishlistCardNameFont),
+                      ),
                     ),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.white,
-                  child: Text(
-                    '$price',
-                    style: TextStyle(
-                      fontSize: (kWishlistCardPriceFont),
+                    Text(
+                      '$price',
+                      style: TextStyle(
+                        fontSize: (kWishlistCardPriceFont),
+                      ),
                     ),
-                  ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        html.window.open(url, name);
+                      },
+                      child: Text(
+                        'Где купить?',
+                        style: TextStyle(fontSize: 10),
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 15,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    html.window.open(url, name);
-                  },
-                  child: Text(
-                    'Где купить?',
-                    style: TextStyle(fontSize: 10),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           )
         ],
       ),

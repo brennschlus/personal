@@ -17,42 +17,42 @@ class _HomePageState extends State<HomePage> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text('Pavel Rodionov'),
-      ),
-      body: Stack(children: [
-        ListView(children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Container(
-                  child: Image.asset('images/myphoto.jpg'),
-                ),
-              ),
-              Text(
-                'Pavel Rodionov',
-                style: TextStyle(fontSize: 40),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, AboutPage.id);
-                    },
-                    icon: Icon(Icons.account_circle),
-                  ),
-                  IconButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, WishlistPage.id);
-                      },
-                      icon: Icon(Icons.present_to_all))
-                ],
-              ),
-            ],
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, AboutPage.id);
+            },
+            icon: Icon(Icons.account_circle),
           ),
-        ]),
-      ]),
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, WishlistPage.id);
+              },
+              icon: Icon(Icons.present_to_all))
+        ],
+      ),
+      body: Stack(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Container(
+              child: Image.asset(
+                'images/myphoto.jpg',
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Pavel Rodionov donda donda donda',
+              style: TextStyle(
+                fontSize: 36,
+                color: Colors.white,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
