@@ -14,14 +14,14 @@ class WishlistCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Variable to get screen size of content
-    var screenSize = MediaQuery.of(context).size;
+    // var screenSize = MediaQuery.of(context).size;
     return Card(
       elevation: 30,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
       ),
       child: Stack(
-        alignment: Alignment.center,
+        alignment: Alignment.topCenter,
         children: [
           Image.asset(
             assetImage,
@@ -32,17 +32,24 @@ class WishlistCard extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  'Name: $name',
-                  style: TextStyle(
-                    fontSize: (screenSize.width * kWishlistCardNameFont / 1080),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.white,
+                  child: Text(
+                    '$name',
+                    style: TextStyle(
+                      fontSize: (kWishlistCardNameFont),
+                    ),
                   ),
                 ),
-                Text(
-                  'Price: $price',
-                  style: TextStyle(
-                    fontSize:
-                        (screenSize.width * kWishlistCardPriceFont / 1080),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.white,
+                  child: Text(
+                    '$price',
+                    style: TextStyle(
+                      fontSize: (kWishlistCardPriceFont),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -54,7 +61,7 @@ class WishlistCard extends StatelessWidget {
                   },
                   child: Text(
                     'Где купить?',
-                    style: TextStyle(fontSize: screenSize.width * 10.0 / 1080),
+                    style: TextStyle(fontSize: 10),
                   ),
                 )
               ],

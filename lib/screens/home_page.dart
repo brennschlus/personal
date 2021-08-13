@@ -14,40 +14,45 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text('Pavel Rodionov'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            CircleAvatar(
-              foregroundImage: AssetImage('images/avatar.jpg'),
-              radius: 200,
-            ),
-            Text(
-              'Pavel Rodionov',
-              style: TextStyle(fontSize: 40),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, AboutPage.id);
-                  },
-                  icon: Icon(Icons.account_circle),
+      body: Stack(children: [
+        ListView(children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: Container(
+                  child: Image.asset('images/myphoto.jpg'),
                 ),
-                IconButton(
+              ),
+              Text(
+                'Pavel Rodionov',
+                style: TextStyle(fontSize: 40),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, WishlistPage.id);
+                      Navigator.pushNamed(context, AboutPage.id);
                     },
-                    icon: Icon(Icons.present_to_all))
-              ],
-            ),
-          ],
-        ),
-      ),
+                    icon: Icon(Icons.account_circle),
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, WishlistPage.id);
+                      },
+                      icon: Icon(Icons.present_to_all))
+                ],
+              ),
+            ],
+          ),
+        ]),
+      ]),
     );
   }
 }

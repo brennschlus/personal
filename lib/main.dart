@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:webapp/screens/about_page.dart';
 import 'package:webapp/screens/wishlist_page.dart';
 import 'screens/home_page.dart';
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Personal website',
       theme: ThemeData(
+        textTheme: GoogleFonts.latoTextTheme(
+          Theme.of(context).textTheme,
+        ),
         primarySwatch: Colors.green,
       ),
       initialRoute: HomePage.id,
