@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isHovering = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +27,30 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.account_circle),
           ),
           IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, WishlistPage.id);
-              },
-              icon: Icon(Icons.present_to_all))
+            onPressed: () {
+              Navigator.pushNamed(context, WishlistPage.id);
+            },
+            icon: Icon(Icons.present_to_all),
+          ),
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                'Wishlist',
+                style: TextStyle(
+                    fontSize: 15,
+                    decoration: isHovering
+                        ? TextDecoration.underline
+                        : TextDecoration.none),
+              ),
+            ),
+            onHover: (hovering) {
+              setState(() => isHovering = hovering);
+            },
+            onTap: () {
+              Navigator.pushNamed(context, WishlistPage.id);
+            },
+          )
         ],
       ),
       body: Stack(

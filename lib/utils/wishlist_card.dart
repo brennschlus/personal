@@ -18,7 +18,7 @@ class WishlistCard extends StatelessWidget {
     return Card(
       elevation: 30,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(50),
       ),
       child: Stack(
         alignment: Alignment.topCenter,
@@ -31,6 +31,7 @@ class WishlistCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
+                alignment: Alignment.bottomCenter,
                 color: Colors.white,
                 child: Column(
                   children: [
@@ -58,6 +59,9 @@ class WishlistCard extends StatelessWidget {
                         style: TextStyle(fontSize: 10),
                       ),
                     ),
+                    SizedBox(
+                      height: 15,
+                    )
                   ],
                 ),
               )
