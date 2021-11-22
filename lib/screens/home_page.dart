@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:webapp/screens/about_page.dart';
 import 'package:webapp/screens/wishlist_page.dart';
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 
 class HomePage extends StatefulWidget {
   static String id = 'home_page';
@@ -62,7 +63,46 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.pushNamed(context, WishlistPage.id);
                   },
-                )
+                ),
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      'Telegram',
+                      style: TextStyle(
+                          fontSize: 15,
+                          decoration: isHovering
+                              ? TextDecoration.underline
+                              : TextDecoration.none),
+                    ),
+                  ),
+                  onHover: (hovering) {
+                    setState(() => isHovering = hovering);
+                  },
+                  onTap: () {
+                    html.window.open('https://t.me/brennschluss', 'telegram');
+                  },
+                ),
+                InkWell(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      'Email',
+                      style: TextStyle(
+                          fontSize: 15,
+                          decoration: isHovering
+                              ? TextDecoration.underline
+                              : TextDecoration.none),
+                    ),
+                  ),
+                  onHover: (hovering) {
+                    setState(() => isHovering = hovering);
+                  },
+                  onTap: () {
+                    html.window
+                        .open('mailto:brennschluss@protonmail.com', 'email');
+                  },
+                ),
               ],
             ),
           )
