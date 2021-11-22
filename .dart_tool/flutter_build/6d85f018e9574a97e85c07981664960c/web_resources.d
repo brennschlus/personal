@@ -1,0 +1,1 @@
+ build/web/manifest.json build/web/icons/Icon-192.png build/web/icons/Icon-512.png build/web/index.html build/web/favicon.png:  /mnt/data/Dev/personal/web/manifest.json /mnt/data/Dev/personal/web/icons/Icon-192.png /mnt/data/Dev/personal/web/icons/Icon-512.png /mnt/data/Dev/personal/web/index.html /mnt/data/Dev/personal/web/favicon.png
