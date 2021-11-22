@@ -11,7 +11,7 @@ const RESOURCES = {
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "5178af1d278432bec8fc830d50996d6f",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "b37ae0f14cbc958316fac4635383b6e8",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "aa1ec80f1b30a51d64c72f669c1326a7",
-"assets/NOTICES": "bc78852021e544ce9b06720157770e89",
+"assets/NOTICES": "cf6f69245fef497617cc72773c546d5a",
 "assets/images/myphoto.jpg": "c9bad6155aa838d3f591de635e78af69",
 "assets/images/gamepad.png": "515fe453be3e2661650863f197e84575",
 "assets/images/k2a2.png": "8a4f6c260cd3d158139abdaceed4aeb9",
@@ -26,10 +26,10 @@ const RESOURCES = {
 "assets/FontManifest.json": "5a32d4310a6f5d9a6b651e75ba0d7372",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "version.json": "241f4a42b47957020519cd2a4cf2c7a2",
-"index.html": "7d3cc9d01f61b1aa17daa2549ac77547",
-"/": "7d3cc9d01f61b1aa17daa2549ac77547",
+"index.html": "a20631ea8898fb7da6c42db14def1cb3",
+"/": "a20631ea8898fb7da6c42db14def1cb3",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"main.dart.js": "8b64ee5a0296ee1022d40e647e1b8dbf"
+"main.dart.js": "e8d3b56b235c61eec75c381d8676e315"
 };
 
 // The application shell files that are downloaded before a service worker can
